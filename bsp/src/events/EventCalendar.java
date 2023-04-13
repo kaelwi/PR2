@@ -10,10 +10,12 @@ public class EventCalendar {
         events = new ArrayList<>();
     }
 
+    // Add Event e to events-List
     public void add(Event e) {
         events.add(e);
     }
 
+    // print events-list
     public void print() {
         for (Event e : events) {
             System.out.println(e);
@@ -21,6 +23,7 @@ public class EventCalendar {
         System.out.println();
     }
 
+    // print events-list (parameter)
     public void print(ArrayList<Event> events) {
         for (Event e : events) {
             System.out.println(e);
@@ -28,18 +31,21 @@ public class EventCalendar {
         System.out.println();
     }
 
+    // get event by title (es wird angenommen, es gibt nur 1 event mit diesem titel)
     public Event getByTitle(String title) {
         Event result = null;
         for (Event e : events ) {
             String eventTitle = e.getTitle();
             if (eventTitle.equals(title)) {
                 result = e;
+                // weil es nur 1 event mit dem titel geben kann, kann man aus der schleife ausbrechen
                 break;
             }
         }
         return result;
     }
 
+    // liefert events vom angebenen typ zurück
     public ArrayList<Event> getByType(EventType type) {
         // liste zum befüllen mit events vom typ "type"
         ArrayList<Event> result = new ArrayList<>();
@@ -54,6 +60,7 @@ public class EventCalendar {
         return result;
     }
 
+    // liefert events vom angebenen ort zurück
     public ArrayList<Event> getByOrt(String ort) {
         ArrayList<Event> result = new ArrayList<>();
         // alle events durchlaufen
@@ -67,6 +74,8 @@ public class EventCalendar {
         return result;
     }
 
+    // hole 1. event, prüfe in schleife, ob es ein event gibt, welches mehr kostet
+    // wenn ja, dann überschreibe price und result mit dem teurerem event
     public Event getMostExpensive() {
         double price = events.get(0).getPreis();
         Event result = events.get(0);
@@ -81,6 +90,7 @@ public class EventCalendar {
         return result;
     }
 
+    // iterator intro
     public void removeExpensive(double limit) {
         for (int i = 0; i < events.size(); i++) {
             if (events.get(i).getPreis() > limit) {
