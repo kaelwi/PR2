@@ -1,3 +1,5 @@
+package studentbsp;
+
 public class App {
     public static void main(String[] args) {
         Student max = new Student("Max", "Mustermann");

@@ -1,3 +1,5 @@
+package studentbsp;
+
 public class Class {
     private String name;
     private int hours;
@@ -26,7 +28,7 @@ public class Class {
     // toString() Methode generiert
     @Override
     public String toString() {
-        return "Class{" +
+        return "StudentBsp.Class{" +
                 "name='" + name + '\'' +
                 '}';
     }

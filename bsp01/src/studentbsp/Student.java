@@ -1,3 +1,5 @@
+package studentbsp;
+
 public class Student {
     private String firstName;
     private String lastName;
@@ -13,7 +15,7 @@ public class Student {
         // extracted method
         if (enrollmentNotPossible(c)) return;
 
-        // wenn array voll ist (sprich auch letzte stelle mit einem Class-Objekt belegt ist) -> increaseArray()
+        // wenn array voll ist (sprich auch letzte stelle mit einem StudentBsp.Class-Objekt belegt ist) -> increaseArray()
         if (this.classes[classes.length - 1] != null) {
             increaseClassArray();
             classes[classes.length - 1] = c;
