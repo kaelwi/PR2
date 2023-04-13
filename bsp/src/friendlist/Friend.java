@@ -1,13 +1,14 @@
 package friendlist;
 
 public class Friend {
-    // name, age, city, country, knownSince
+    // private Attribute name, age, city, country, knownSince
     private String name;
     private int age;
     private String city;
     private String country;
     private int knownSince;
 
+    // Generate Constructor
     public Friend(String name, int age, String city, String country, int knownSince) {
         this.name = name;
         this.age = age;
@@ -16,6 +17,7 @@ public class Friend {
         this.knownSince = knownSince;
     }
 
+    // Generate Getter
     public String getName() {
         return name;
     }
@@ -36,6 +38,7 @@ public class Friend {
         return knownSince;
     }
 
+    // Generate toString()
     @Override
     public String toString() {
         return "Friend{" +
