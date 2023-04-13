@@ -94,11 +94,22 @@ public class FriendList {
         ArrayList<Friend> result = new ArrayList<>();
 
         // laufe alle friends durch und schau, wo deren country nicht gleich dem übergebenen ist
+        // for each schleife
         for (Friend f : friends) {
             if (!f.getCountry().equals(homeCountry)) {
                 result.add(f);
             }
         }
+
+        // for schleife
+        /*
+        for (int i = 0; i < friends.size(); i++) {
+            if (!friends.get(i).getCountry().equals(homeCountry)) {
+                result.add(friends.get(i));
+            }
+        }
+
+         */
 
         return result;
     }
